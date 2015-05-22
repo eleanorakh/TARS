@@ -4,7 +4,7 @@ A Slack bot to catch reposted links.
 
     bundle install
     createdb tars
-    bundle exec ruby tars.rb
+    CHANNEL_ID=foo42bar SLACK_TOKEN=baz42qux bundle exec ruby tars.rb
 
 ## Contributors
 
