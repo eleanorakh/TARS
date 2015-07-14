@@ -31,7 +31,7 @@ channel_id = ENV['CHANNEL_ID']
 
 client.on(:message) do |data|
   p data
-  if data['type'] == 'message'
+  if data['type'] == 'message' && data['channel'] == channel_id
     urls = data['text'].to_s.scan(%r{https?://[^\s]+})
 
     if urls.any? { |url| url_exists? url }
